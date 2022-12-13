@@ -1,0 +1,7 @@
+
+    
+
+<% Product.where(category_id: @category.id).each do |prod| %>
+    <%= link_to prod.product_name , product_path(prod), method: :get %> </br>
+    <%= prod.price %>
+<% end %>
